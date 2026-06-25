@@ -195,6 +195,13 @@ export default function OfficesPage() {
     }
     .addr-block{ margin:0 0 24px; color:var(--text-primary); line-height:1.6; }
     .addr-line{ font-size:16px; line-height:1.6; color:var(--text-secondary); font-weight:400; }
+    .office-fine-print{
+      font-size:12px;
+      line-height:1.6;
+      color:var(--text-secondary);
+      margin:12px 0 0;
+      font-weight:400;
+    }
 
     .links{ margin:24px 0; }
     .btn-link{
@@ -225,8 +232,8 @@ export default function OfficesPage() {
     const gmap = (q) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
 
     // Canada (Toronto)
-    const caLine1 = "1 King Street West, Suite 4800-165";
-    const caLine2 = "Toronto, Ontario, M5H 1A1";
+    const caLine1 = "4950 Yonge Street, Suite 2200";
+    const caLine2 = "Toronto, Ontario, M2N 6K1";
     const caQuery = `${caLine1}, ${caLine2}`;
     const telCA = "(437) 888-2974";
     const faxCA = "(647) 374-0066";
@@ -281,6 +288,9 @@ export default function OfficesPage() {
                             h("div", { className: "addr-block", "aria-label": "Toronto address" },
                                 h("div", { className: "addr-line" }, caLine1),
                                 h("div", { className: "addr-line" }, caLine2)
+                            ),
+                            h("p", { className: "office-fine-print" },
+                                "Through Canada's interprovincial mobility framework, we are able to advise and support clients on matters involving multiple provinces, including technology, privacy, and commercial matters. Limitations may apply."
                             ),
                             h("div", { className: "links" },
                                 h("a", {
